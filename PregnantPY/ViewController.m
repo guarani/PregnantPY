@@ -22,6 +22,7 @@
     
     UIButton *previousButton;
     for (int i = 0; i < total; i++) {
+        
         // Do any additional setup after loading the view, typically from a nib.
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
             button.backgroundColor = [UIColor purpleColor];
@@ -37,7 +38,7 @@
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self.view
                                                               attribute:NSLayoutAttributeWidth
-                                                             multiplier:0.8 - (i / 10)
+                                                             multiplier:0.8
                                                                constant:0]];
         
         [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:button
@@ -47,6 +48,7 @@
                                                                     attribute:NSLayoutAttributeWidth
                                                                    multiplier:1
                                                                      constant:0]];
+        
         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
                                                               attribute:NSLayoutAttributeCenterX
                                                               relatedBy:NSLayoutRelationEqual
@@ -54,14 +56,20 @@
                                                               attribute:NSLayoutAttributeCenterX
                                                              multiplier:1
                                                                constant:0]];
-        if (i > 0) {
-            button.backgroundColor = [UIColor orangeColor];
+        if (i == 0) {
+            button.backgroundColor = [UIColor redColor];
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[button]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
+        } else if (i > 0 && i < total - 1) {
+            button.backgroundColor = [UIColor greenColor];
             [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousButton]-[button]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousButton, button)]];
+        } else {
+            button.backgroundColor = [UIColor blueColor];
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousButton]-[button]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousButton, button)]];
         }
         
         previousButton = button;
     }
-   }
+}
 
 - (void)aMethod:(UIButton *)button
 {

@@ -14,6 +14,7 @@
 		6FA1EDF01AAB26C500844EF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1EDEF1AAB26C500844EF1 /* Images.xcassets */; };
 		6FA1EDF31AAB26C500844EF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1EDF11AAB26C500844EF1 /* LaunchScreen.xib */; };
 		6FA1EDFF1AAB26C500844EF1 /* PregnantPYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDFE1AAB26C500844EF1 /* PregnantPYTests.m */; };
+		6FC82B271AB24A3C00363231 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC82B261AB24A3C00363231 /* cat.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6FA1EDF81AAB26C500844EF1 /* PregnantPYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PregnantPYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1EDFD1AAB26C500844EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA1EDFE1AAB26C500844EF1 /* PregnantPYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PregnantPYTests.m; sourceTree = "<group>"; };
+		6FC82B261AB24A3C00363231 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		6FA1EDE11AAB26C500844EF1 /* PregnantPY */ = {
 			isa = PBXGroup;
 			children = (
+				6FC82B261AB24A3C00363231 /* cat.jpg */,
 				6FA1EDE61AAB26C500844EF1 /* AppDelegate.h */,
 				6FA1EDE71AAB26C500844EF1 /* AppDelegate.m */,
 				6FA1EDE91AAB26C500844EF1 /* ViewController.h */,
@@ -201,6 +204,7 @@
 			files = (
 				6FA1EDEE1AAB26C500844EF1 /* Main.storyboard in Resources */,
 				6FA1EDF31AAB26C500844EF1 /* LaunchScreen.xib in Resources */,
+				6FC82B271AB24A3C00363231 /* cat.jpg in Resources */,
 				6FA1EDF01AAB26C500844EF1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 				6FA1EE041AAB26C500844EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA1EE051AAB26C500844EF1 /* Build configuration list for PBXNativeTarget "PregnantPYTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +425,7 @@
 				6FA1EE071AAB26C500844EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

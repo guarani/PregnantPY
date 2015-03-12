@@ -18,54 +18,96 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    int total = 3;
+    int total = 10;
     
-    UIButton *previousButton;
+    UIButton *previousLeftButton;
+    UIButton *previousRightButton;
     for (int i = 0; i < total; i++) {
-        // Do any additional setup after loading the view, typically from a nib.
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            button.backgroundColor = [UIColor purpleColor];
-        [button addTarget:self
-                   action:@selector(aMethod:)
-         forControlEvents:UIControlEventTouchUpInside];
-        button.translatesAutoresizingMaskIntoConstraints = NO;
-        [button setTitle:@"Show View" forState:UIControlStateNormal];
-        [self.scrollView addSubview:button];
-
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
+        
+        UIButton *leftButton = [self createButton:@"Left"];
+        UIButton *rightButton = [self createButton:@"Right"];
+        
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
+                                                                    attribute:NSLayoutAttributeWidth
+                                                                    relatedBy:NSLayoutRelationEqual
+                                                                       toItem:self.view
+                                                                    attribute:NSLayoutAttributeWidth
+                                                                   multiplier:0.425
+                                                                     constant:0]];
+        
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
                                                               attribute:NSLayoutAttributeWidth
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self.view
                                                               attribute:NSLayoutAttributeWidth
-                                                             multiplier:0.8 - (i / 10)
+                                                             multiplier:0.425
                                                                constant:0]];
         
-        [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:button
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
+                                                              attribute:NSLayoutAttributeLeft
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.view
+                                                              attribute:NSLayoutAttributeLeft
+                                                             multiplier:1
+                                                               constant:10]];
+    
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
+                                                              attribute:NSLayoutAttributeRight
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.view
+                                                              attribute:NSLayoutAttributeRight
+                                                             multiplier:1
+                                                               constant:-10]];
+
+        
+        [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
                                                                     attribute:NSLayoutAttributeHeight
                                                                     relatedBy:NSLayoutRelationEqual
-                                                                       toItem:button
+                                                                       toItem:leftButton
                                                                     attribute:NSLayoutAttributeWidth
                                                                    multiplier:1
                                                                      constant:0]];
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:button
-                                                              attribute:NSLayoutAttributeCenterX
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self.view
-                                                              attribute:NSLayoutAttributeCenterX
-                                                             multiplier:1
-                                                               constant:0]];
-        if (i > 0) {
-            button.backgroundColor = [UIColor orangeColor];
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousButton]-[button]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousButton, button)]];
+        
+        [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
+                                                                    attribute:NSLayoutAttributeHeight
+                                                                    relatedBy:NSLayoutRelationEqual
+                                                                       toItem:rightButton
+                                                                    attribute:NSLayoutAttributeWidth
+                                                                   multiplier:1
+                                                                     constant:0]];
+
+        if (i == 0) {
+            
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[leftButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(leftButton)]];
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[rightButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(rightButton)]];
+        } else if (i < total - 1) {
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLeftButton]-[leftButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousLeftButton, leftButton)]];
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousRightButton]-[rightButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousRightButton, rightButton)]];
+        } else {
+            leftButton.backgroundColor = rightButton.backgroundColor = [UIColor blueColor];
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLeftButton]-[leftButton]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousLeftButton, leftButton)]];
+            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousRightButton]-[rightButton]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousRightButton, rightButton)]];
         }
         
-        previousButton = button;
+        previousLeftButton = leftButton;
+        previousRightButton = rightButton;
     }
    }
 
 - (void)aMethod:(UIButton *)button
 {
     NSLog(@"Button  clicked.");
+}
+
+- (UIButton *)createButton:(NSString *)title {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *image = [UIImage imageNamed:@"cat.jpg"];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(aMethod:) forControlEvents:UIControlEventTouchUpInside];
+    button.translatesAutoresizingMaskIntoConstraints = NO;
+    [button setTitle:title forState:UIControlStateNormal];
+    [self.scrollView addSubview:button];
+    return button;
 }
 
 

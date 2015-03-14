@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Comm.h"
+
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
@@ -18,81 +21,151 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    int total = 10;
-    
-    UIButton *previousLeftButton;
-    UIButton *previousRightButton;
-    for (int i = 0; i < total; i++) {
-        
-        UIButton *leftButton = [self createButton:@"Left"];
-        UIButton *rightButton = [self createButton:@"Right"];
-        
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
-                                                                    attribute:NSLayoutAttributeWidth
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:self.view
-                                                                    attribute:NSLayoutAttributeWidth
-                                                                   multiplier:0.425
-                                                                     constant:0]];
-        
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
-                                                              attribute:NSLayoutAttributeWidth
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self.view
-                                                              attribute:NSLayoutAttributeWidth
-                                                             multiplier:0.425
-                                                               constant:0]];
-        
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
-                                                              attribute:NSLayoutAttributeLeft
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self.view
-                                                              attribute:NSLayoutAttributeLeft
-                                                             multiplier:1
-                                                               constant:10]];
-    
-        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
-                                                              attribute:NSLayoutAttributeRight
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self.view
-                                                              attribute:NSLayoutAttributeRight
-                                                             multiplier:1
-                                                               constant:-10]];
+    [Comm command:@"images" onSuccess:^(id onSuccess) {
+        NSDictionary *response = (NSDictionary *)onSuccess;
 
         
-        [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
-                                                                    attribute:NSLayoutAttributeHeight
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:leftButton
-                                                                    attribute:NSLayoutAttributeWidth
-                                                                   multiplier:1
-                                                                     constant:0]];
+        int total = [response[@"data"] count];
         
-        [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
-                                                                    attribute:NSLayoutAttributeHeight
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:rightButton
-                                                                    attribute:NSLayoutAttributeWidth
-                                                                   multiplier:1
-                                                                     constant:0]];
-
-        if (i == 0) {
+        UIButton *previousLeftButton;
+        UIButton *previousRightButton;
+        UILabel *previousLeftLabel;
+        UILabel *previousRightLabel;
+        
+        for (int i = 0; i < total; i = i + 2) {
             
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[leftButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(leftButton)]];
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[rightButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(rightButton)]];
-        } else if (i < total - 1) {
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLeftButton]-[leftButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousLeftButton, leftButton)]];
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousRightButton]-[rightButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousRightButton, rightButton)]];
-        } else {
-            leftButton.backgroundColor = rightButton.backgroundColor = [UIColor blueColor];
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLeftButton]-[leftButton]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousLeftButton, leftButton)]];
-            [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousRightButton]-[rightButton]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousRightButton, rightButton)]];
+            UIButton *leftButton = [self createButton:@"Left"];
+            UIButton *rightButton = [self createButton:@"Right"];
+            
+            UILabel *leftLabel = [UILabel new];
+            [self.scrollView addSubview:leftLabel];
+            leftLabel.translatesAutoresizingMaskIntoConstraints = NO;
+            leftLabel.textAlignment = NSTextAlignmentCenter;
+            leftLabel.text = @"Left tag";
+            
+            UILabel *rightLabel = [UILabel new];
+            [self.scrollView addSubview:rightLabel];
+            rightLabel.translatesAutoresizingMaskIntoConstraints = NO;
+            rightLabel.textAlignment = NSTextAlignmentCenter;
+            rightLabel.text = @"Right tag";
+            
+            NSString *leftBase64 = response[@"data"][i];
+            NSData *leftData = [[NSData alloc] initWithBase64EncodedString:leftBase64 options:0];
+            UIImage *leftImage = [UIImage imageWithData:leftData];
+            [leftButton setBackgroundImage:leftImage forState:UIControlStateNormal];
+            
+            NSString *rightBase64 = response[@"data"][i + 1];
+            NSData *rightData = [[NSData alloc] initWithBase64EncodedString:rightBase64 options:0];
+            UIImage *rightImage = [UIImage imageWithData:rightData];
+            [rightButton setBackgroundImage:rightImage forState:UIControlStateNormal];
+            
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:0.425
+                                                                   constant:0]];
+            
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:0.425
+                                                                   constant:0]];
+            //UILabel widths
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftLabel
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:leftButton
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:1
+                                                                   constant:0]];
+            
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightLabel
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:rightButton
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:1
+                                                                   constant:0]];
+            //end UILabel widths
+            
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                 multiplier:1
+                                                                   constant:10]];
+            
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
+                                                                  attribute:NSLayoutAttributeRight
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeRight
+                                                                 multiplier:1
+                                                                   constant:-10]];
+            
+            
+            //UILabel horizontal
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:leftLabel
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                 multiplier:1
+                                                                   constant:10]];
+            
+            [self.view addConstraint:[NSLayoutConstraint constraintWithItem:rightLabel
+                                                                  attribute:NSLayoutAttributeRight
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.view
+                                                                  attribute:NSLayoutAttributeRight
+                                                                 multiplier:1
+                                                                   constant:-10]];
+            
+            //end UILabel horizontal
+            
+            
+            [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:leftButton
+                                                                        attribute:NSLayoutAttributeHeight
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:leftButton
+                                                                        attribute:NSLayoutAttributeWidth
+                                                                       multiplier:1
+                                                                         constant:0]];
+            
+            [self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:rightButton
+                                                                        attribute:NSLayoutAttributeHeight
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:rightButton
+                                                                        attribute:NSLayoutAttributeWidth
+                                                                       multiplier:1
+                                                                         constant:0]];
+            
+            if (i == 0) {
+                [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[leftButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(leftButton)]];
+                [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[rightButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(rightButton)]];
+            } else if (i < total - 2) {
+                [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLeftButton]-[previousLeftLabel]-[leftButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousLeftButton, previousLeftLabel, leftButton)]];
+                [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousRightButton]-[previousRightLabel]-[rightButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousRightButton, previousRightLabel, rightButton)]];
+            } else {
+                leftButton.backgroundColor = rightButton.backgroundColor = [UIColor blueColor];
+                [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLeftButton]-[previousLeftLabel]-[leftButton]-[leftLabel]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousLeftButton, previousLeftLabel, leftButton, leftLabel)]];
+                [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousRightButton]-[previousRightLabel]-[rightButton]-[rightLabel]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(previousRightButton, previousRightLabel, rightButton, rightLabel)]];
+            }
+            
+            previousLeftButton = leftButton;
+            previousRightButton = rightButton;
+            previousLeftLabel = leftLabel;
+            previousRightLabel = rightLabel;
         }
-        
-        previousLeftButton = leftButton;
-        previousRightButton = rightButton;
-    }
-   }
+    }];
+    
+
+}
 
 - (void)aMethod:(UIButton *)button
 {
@@ -101,8 +174,6 @@
 
 - (UIButton *)createButton:(NSString *)title {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    UIImage *image = [UIImage imageNamed:@"cat.jpg"];
-    [button setBackgroundImage:image forState:UIControlStateNormal];
     [button addTarget:self action:@selector(aMethod:) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
     [button setTitle:title forState:UIControlStateNormal];

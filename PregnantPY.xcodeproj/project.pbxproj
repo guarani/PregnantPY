@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F68447D1AB3F7870012841D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68447C1AB3F7870012841D /* DetailsController.m */; };
 		6FA1EDE51AAB26C500844EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDE41AAB26C500844EF1 /* main.m */; };
 		6FA1EDE81AAB26C500844EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDE71AAB26C500844EF1 /* AppDelegate.m */; };
 		6FA1EDEB1AAB26C500844EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDEA1AAB26C500844EF1 /* ViewController.m */; };
@@ -15,6 +16,8 @@
 		6FA1EDF31AAB26C500844EF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1EDF11AAB26C500844EF1 /* LaunchScreen.xib */; };
 		6FA1EDFF1AAB26C500844EF1 /* PregnantPYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDFE1AAB26C500844EF1 /* PregnantPYTests.m */; };
 		6FC82B271AB24A3C00363231 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC82B261AB24A3C00363231 /* cat.jpg */; };
+		6FC82B2A1AB24DB600363231 /* Comm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC82B291AB24DB600363231 /* Comm.m */; };
+		6FC82B2D1AB250D000363231 /* NSData+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC82B2C1AB250D000363231 /* NSData+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F6844781AB3ECF40012841D /* DetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
+		6F68447C1AB3F7870012841D /* DetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
 		6FA1EDDF1AAB26C500844EF1 /* PregnantPY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PregnantPY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1EDE31AAB26C500844EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA1EDE41AAB26C500844EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +47,10 @@
 		6FA1EDFD1AAB26C500844EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA1EDFE1AAB26C500844EF1 /* PregnantPYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PregnantPYTests.m; sourceTree = "<group>"; };
 		6FC82B261AB24A3C00363231 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		6FC82B281AB24DB600363231 /* Comm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comm.h; sourceTree = "<group>"; };
+		6FC82B291AB24DB600363231 /* Comm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comm.m; sourceTree = "<group>"; };
+		6FC82B2B1AB250D000363231 /* NSData+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utils.h"; sourceTree = "<group>"; };
+		6FC82B2C1AB250D000363231 /* NSData+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +101,12 @@
 				6FA1EDEF1AAB26C500844EF1 /* Images.xcassets */,
 				6FA1EDF11AAB26C500844EF1 /* LaunchScreen.xib */,
 				6FA1EDE21AAB26C500844EF1 /* Supporting Files */,
+				6FC82B281AB24DB600363231 /* Comm.h */,
+				6FC82B291AB24DB600363231 /* Comm.m */,
+				6FC82B2B1AB250D000363231 /* NSData+Utils.h */,
+				6FC82B2C1AB250D000363231 /* NSData+Utils.m */,
+				6F6844781AB3ECF40012841D /* DetailsController.h */,
+				6F68447C1AB3F7870012841D /* DetailsController.m */,
 			);
 			path = PregnantPY;
 			sourceTree = "<group>";
@@ -223,7 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC82B2D1AB250D000363231 /* NSData+Utils.m in Sources */,
 				6FA1EDEB1AAB26C500844EF1 /* ViewController.m in Sources */,
+				6F68447D1AB3F7870012841D /* DetailsController.m in Sources */,
+				6FC82B2A1AB24DB600363231 /* Comm.m in Sources */,
 				6FA1EDE81AAB26C500844EF1 /* AppDelegate.m in Sources */,
 				6FA1EDE51AAB26C500844EF1 /* main.m in Sources */,
 			);

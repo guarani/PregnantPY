@@ -36,6 +36,7 @@
             
             UIButton *leftButton = [self createButton:@"Left"];
             UIButton *rightButton = [self createButton:@"Right"];
+//            leftButton.tag = [response[@"data"][i][@"id"] integerValue];
             
             UILabel *leftLabel = [UILabel new];
             [self.scrollView addSubview:leftLabel];
@@ -169,6 +170,7 @@
 
 - (void)aMethod:(UIButton *)button
 {
+    [self performSegueWithIdentifier:@"DetailsSegueID" sender:self];
     NSLog(@"Button  clicked.");
 }
 
@@ -185,6 +187,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    /*segue.destinationViewController
+    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RecipeDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
+    }*/
 }
 
 

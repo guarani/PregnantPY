@@ -7,6 +7,7 @@
 //
 
 #import "DetailsController.h"
+#import "MapViewController.h"
 #import "Comm.h"
 
 @interface DetailsController ()
@@ -16,5 +17,17 @@
 @end
 
 @implementation DetailsController
+- (IBAction)openMap:(id)sender {
+    MapViewController *mapVC = [[MapViewController alloc] init];
+    mapVC.nombre = self.nombre;
+    mapVC.latitud = self.latitud;
+    mapVC.longitud = self.longitud;
+    //[self performSegueWithIdentifier:@"DetailsSegueID" sender:self];
+    [self.navigationController pushViewController:mapVC animated:YES];
+}
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    
+}
 @end

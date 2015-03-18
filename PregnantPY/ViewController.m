@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MapViewController.h"
 #import "Comm.h"
+#import "DetailsController.h"
 
 
 @interface ViewController ()
@@ -18,6 +20,10 @@
 
 @implementation ViewController
 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -171,7 +177,6 @@
 - (void)aMethod:(UIButton *)button
 {
     [self performSegueWithIdentifier:@"DetailsSegueID" sender:self];
-    NSLog(@"Button  clicked.");
 }
 
 - (UIButton *)createButton:(NSString *)title {
@@ -191,12 +196,13 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    /*segue.destinationViewController
-    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        RecipeDetailViewController *destViewController = segue.destinationViewController;
-        destViewController.recipeName = [recipes objectAtIndex:indexPath.row];
-    }*/
+    DetailsController *dViewC = (DetailsController *) segue.destinationViewController;
+    dViewC.nombre = @"test nombre";
+    dViewC.latitud = -25.23;
+    dViewC.longitud = 57;
+    
+    
+    
 }
 
 

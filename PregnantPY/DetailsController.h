@@ -10,5 +10,8 @@
 
 @interface DetailsController : UIViewController
 
+@property (nonatomic, assign) double latitud;
+@property (nonatomic, assign) double longitud;
+@property (nonatomic, strong) NSString *nombre;
 
 @end

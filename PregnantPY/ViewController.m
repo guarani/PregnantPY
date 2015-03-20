@@ -15,6 +15,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (assign, nonatomic) NSUInteger iden;
+
 
 @end
 
@@ -27,12 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [Comm command:@"images" onSuccess:^(id onSuccess) {
+    [Comm command:@"pregnant" onSuccess:^(id onSuccess) {
         NSDictionary *response = (NSDictionary *)onSuccess;
 
         
-        int total = [response[@"data"] count];
-        
+        NSUInteger total = [response[@"data"] count];
         UIButton *previousLeftButton;
         UIButton *previousRightButton;
         UILabel *previousLeftLabel;
@@ -42,26 +43,28 @@
             
             UIButton *leftButton = [self createButton:@"Left"];
             UIButton *rightButton = [self createButton:@"Right"];
-//            leftButton.tag = [response[@"data"][i][@"id"] integerValue];
+            leftButton.tag = [response[@"data"][i][@"id"] integerValue];
+            rightButton.tag = [response[@"data"][i+1][@"id"] integerValue];
+            
             
             UILabel *leftLabel = [UILabel new];
             [self.scrollView addSubview:leftLabel];
             leftLabel.translatesAutoresizingMaskIntoConstraints = NO;
             leftLabel.textAlignment = NSTextAlignmentCenter;
-            leftLabel.text = @"Left tag";
+            leftLabel.text = response[@"data"][i][@"title"];
             
             UILabel *rightLabel = [UILabel new];
             [self.scrollView addSubview:rightLabel];
             rightLabel.translatesAutoresizingMaskIntoConstraints = NO;
             rightLabel.textAlignment = NSTextAlignmentCenter;
-            rightLabel.text = @"Right tag";
+            rightLabel.text = response[@"data"][i+1][@"title"];
             
-            NSString *leftBase64 = response[@"data"][i];
+            NSString *leftBase64 = response[@"data"][i][@"photo"];
             NSData *leftData = [[NSData alloc] initWithBase64EncodedString:leftBase64 options:0];
             UIImage *leftImage = [UIImage imageWithData:leftData];
             [leftButton setBackgroundImage:leftImage forState:UIControlStateNormal];
             
-            NSString *rightBase64 = response[@"data"][i + 1];
+            NSString *rightBase64 = response[@"data"][i + 1][@"photo"];
             NSData *rightData = [[NSData alloc] initWithBase64EncodedString:rightBase64 options:0];
             UIImage *rightImage = [UIImage imageWithData:rightData];
             [rightButton setBackgroundImage:rightImage forState:UIControlStateNormal];
@@ -176,6 +179,8 @@
 
 - (void)aMethod:(UIButton *)button
 {
+    self.iden = button.tag;
+    
     [self performSegueWithIdentifier:@"DetailsSegueID" sender:self];
 }
 
@@ -197,10 +202,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     DetailsController *dViewC = (DetailsController *) segue.destinationViewController;
-    dViewC.nombre = @"test nombre";
-    dViewC.latitud = -25.23;
-    dViewC.longitud = 57;
-    
+    dViewC.iden = self.iden;
     
     
 }

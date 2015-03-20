@@ -13,10 +13,12 @@
 @interface DetailsController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
 @implementation DetailsController
+
 - (IBAction)openMap:(id)sender {
     MapViewController *mapVC = [[MapViewController alloc] init];
     mapVC.nombre = self.nombre;
@@ -43,5 +45,20 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    [Comm command:@"details" onSuccess:^(id onSuccess) {
+        NSDictionary *response = (NSDictionary *)onSuccess;
+        
+        for (int i = 0; i < [response[@"data"] count]; i++) {
+            
+            if ([response[@"data"][i][@"ïd"] integerValue] == self.iden) {
+                
+                NSString *imageBase64 = response[@"data"][i][@"photo"];
+                NSData *imageData = [[NSData alloc] initWithBase64EncodedString:imageBase64 options:0];
+                UIImage *imageImage = [UIImage imageWithData:imageData];
+                self.imageView.image = imageImage;
+            }
+        }
+        
+    }];
 }
 @end

@@ -13,5 +13,6 @@
 @property (nonatomic, assign) double latitud;
 @property (nonatomic, assign) double longitud;
 @property (nonatomic, strong) NSString *nombre;
+@property (nonatomic, assign) NSUInteger iden;
 
 @end

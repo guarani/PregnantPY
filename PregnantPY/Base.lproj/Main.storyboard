@@ -168,6 +168,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="601"/>
+                    <connections>
+                        <outlet property="imageView" destination="p1f-fX-wUh" id="Gw3-4w-159"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zay-1h-F6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

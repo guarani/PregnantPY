@@ -131,7 +131,7 @@
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(self.latitud, self.longitud);
     marker.title = self.nombre;
-    marker.snippet = @"Australia";
+    marker.snippet = @"Paraguay";
     
     mapView.selectedMarker = marker;
     

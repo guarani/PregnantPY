@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F20E1D61ABE249000125377 /* pregnantSplash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6F20E1D51ABE249000125377 /* pregnantSplash.jpeg */; };
 		6F68447D1AB3F7870012841D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68447C1AB3F7870012841D /* DetailsController.m */; };
 		6F7CA14C1AB8DDC900340482 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA14B1AB8DDC900340482 /* GoogleMaps.framework */; };
 		6F7CA14E1AB8DE1200340482 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F7CA14D1AB8DE1200340482 /* GoogleMaps.bundle */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F20E1D51ABE249000125377 /* pregnantSplash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pregnantSplash.jpeg; sourceTree = "<group>"; };
 		6F6844781AB3ECF40012841D /* DetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
 		6F68447C1AB3F7870012841D /* DetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
 		6F7CA14B1AB8DDC900340482 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		6FA1EDE11AAB26C500844EF1 /* PregnantPY */ = {
 			isa = PBXGroup;
 			children = (
+				6F20E1D51ABE249000125377 /* pregnantSplash.jpeg */,
 				6FC82B261AB24A3C00363231 /* cat.jpg */,
 				6FA1EDE61AAB26C500844EF1 /* AppDelegate.h */,
 				6FA1EDE71AAB26C500844EF1 /* AppDelegate.m */,
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FA1EDEE1AAB26C500844EF1 /* Main.storyboard in Resources */,
+				6F20E1D61ABE249000125377 /* pregnantSplash.jpeg in Resources */,
 				6FA1EDF31AAB26C500844EF1 /* LaunchScreen.xib in Resources */,
 				6FC82B271AB24A3C00363231 /* cat.jpg in Resources */,
 				6FA1EDF01AAB26C500844EF1 /* Images.xcassets in Resources */,

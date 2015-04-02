@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F20E1D61ABE249000125377 /* pregnantSplash.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6F20E1D51ABE249000125377 /* pregnantSplash.jpeg */; };
+		6F2C0EE41AC8D9F0009520F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2C0EE31AC8D9F0009520F1 /* MapViewController.m */; };
+		6F6805441AC37B7500DA3336 /* 1660609_588099817944828_1833967854_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805311AC37B7400DA3336 /* 1660609_588099817944828_1833967854_n.png */; };
+		6F6805451AC37B7500DA3336 /* GmrV3105199.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805321AC37B7500DA3336 /* GmrV3105199.jpg */; };
+		6F6805461AC37B7500DA3336 /* happy-pregnant_21187596.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805331AC37B7500DA3336 /* happy-pregnant_21187596.jpg */; };
+		6F6805471AC37B7500DA3336 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805341AC37B7500DA3336 /* image1.png */; };
+		6F6805481AC37B7500DA3336 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805351AC37B7500DA3336 /* image2.png */; };
+		6F6805491AC37B7500DA3336 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805361AC37B7500DA3336 /* image3.png */; };
+		6F68054A1AC37B7500DA3336 /* image4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805371AC37B7500DA3336 /* image4.png */; };
+		6F68054B1AC37B7500DA3336 /* image5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805381AC37B7500DA3336 /* image5.png */; };
+		6F68054C1AC37B7500DA3336 /* image6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805391AC37B7500DA3336 /* image6.png */; };
+		6F68054D1AC37B7500DA3336 /* image7.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F68053A1AC37B7500DA3336 /* image7.png */; };
+		6F68054E1AC37B7500DA3336 /* image8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F68053B1AC37B7500DA3336 /* image8.jpg */; };
+		6F68054F1AC37B7500DA3336 /* image9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F68053C1AC37B7500DA3336 /* image9.jpg */; };
+		6F6805501AC37B7500DA3336 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F68053D1AC37B7500DA3336 /* logo.jpg */; };
+		6F6805511AC37B7500DA3336 /* pregnancy-labels-set-prev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F68053E1AC37B7500DA3336 /* pregnancy-labels-set-prev.jpg */; };
+		6F6805521AC37B7500DA3336 /* pregnant-woman--sun_19-130916.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F68053F1AC37B7500DA3336 /* pregnant-woman--sun_19-130916.jpg */; };
+		6F6805531AC37B7500DA3336 /* pregnant-woman-and-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805401AC37B7500DA3336 /* pregnant-woman-and-man.jpg */; };
+		6F6805541AC37B7500DA3336 /* pregnant-woman-icons-set-vector-1123500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805411AC37B7500DA3336 /* pregnant-woman-icons-set-vector-1123500.jpg */; };
+		6F6805551AC37B7500DA3336 /* pregnant-woman-in-hand-drawn-style_23-2147505580.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805421AC37B7500DA3336 /* pregnant-woman-in-hand-drawn-style_23-2147505580.jpg */; };
+		6F6805561AC37B7500DA3336 /* pregnant-woman-with-echo_432-19316570.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805431AC37B7500DA3336 /* pregnant-woman-with-echo_432-19316570.jpg */; };
+		6F6805581AC37C5A00DA3336 /* bar_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6805571AC37C5A00DA3336 /* bar_img.png */; };
+		6F68447D1AB3F7870012841D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68447C1AB3F7870012841D /* DetailsController.m */; };
+		6F7CA14C1AB8DDC900340482 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA14B1AB8DDC900340482 /* GoogleMaps.framework */; };
+		6F7CA14E1AB8DE1200340482 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F7CA14D1AB8DE1200340482 /* GoogleMaps.bundle */; };
+		6F7CA1501AB8DE5D00340482 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA14F1AB8DE5D00340482 /* AVFoundation.framework */; };
+		6F7CA15C1AB8DF3800340482 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1511AB8DF3800340482 /* CoreData.framework */; };
+		6F7CA15D1AB8DF3800340482 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1521AB8DF3800340482 /* CoreLocation.framework */; };
+		6F7CA15E1AB8DF3800340482 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1531AB8DF3800340482 /* CoreText.framework */; };
+		6F7CA15F1AB8DF3800340482 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1541AB8DF3800340482 /* GLKit.framework */; };
+		6F7CA1601AB8DF3800340482 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1551AB8DF3800340482 /* ImageIO.framework */; };
+		6F7CA1611AB8DF3800340482 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1561AB8DF3800340482 /* libc++.dylib */; };
+		6F7CA1621AB8DF3800340482 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1571AB8DF3800340482 /* libicucore.dylib */; };
+		6F7CA1631AB8DF3800340482 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1581AB8DF3800340482 /* libz.dylib */; };
+		6F7CA1641AB8DF3800340482 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA1591AB8DF3800340482 /* OpenGLES.framework */; };
+		6F7CA1651AB8DF3800340482 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA15A1AB8DF3800340482 /* QuartzCore.framework */; };
+		6F7CA1661AB8DF3800340482 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CA15B1AB8DF3800340482 /* SystemConfiguration.framework */; };
+		6F92022F1AC37FFC00AC236E /* nav_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F92022E1AC37FFC00AC236E /* nav_bar_background.png */; };
+		6F9202331AC380FB00AC236E /* nav.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9202321AC380FB00AC236E /* nav.png */; };
+		6F9202671AC39E0D00AC236E /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9202661AC39E0D00AC236E /* button.png */; };
 		6FA1EDE51AAB26C500844EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDE41AAB26C500844EF1 /* main.m */; };
 		6FA1EDE81AAB26C500844EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDE71AAB26C500844EF1 /* AppDelegate.m */; };
 		6FA1EDEB1AAB26C500844EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDEA1AAB26C500844EF1 /* ViewController.m */; };
@@ -14,6 +54,11 @@
 		6FA1EDF01AAB26C500844EF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1EDEF1AAB26C500844EF1 /* Images.xcassets */; };
 		6FA1EDF31AAB26C500844EF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA1EDF11AAB26C500844EF1 /* LaunchScreen.xib */; };
 		6FA1EDFF1AAB26C500844EF1 /* PregnantPYTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1EDFE1AAB26C500844EF1 /* PregnantPYTests.m */; };
+		6FC82B271AB24A3C00363231 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FC82B261AB24A3C00363231 /* cat.jpg */; };
+		6FC82B2A1AB24DB600363231 /* Comm.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC82B291AB24DB600363231 /* Comm.m */; };
+		6FC82B2D1AB250D000363231 /* NSData+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC82B2C1AB250D000363231 /* NSData+Utils.m */; };
+		6FCCD5CD1ACCBA9300FE0AE6 /* default.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6FCCD5CC1ACCBA9300FE0AE6 /* default.gpx */; };
+		6FCCD5CF1ACCCDE000FE0AE6 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCCD5CE1ACCCDDF00FE0AE6 /* home@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +72,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F20E1D51ABE249000125377 /* pregnantSplash.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pregnantSplash.jpeg; sourceTree = "<group>"; };
+		6F2C0EE21AC8D9F0009520F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = PregnantPY/MapViewController.h; sourceTree = "<group>"; };
+		6F2C0EE31AC8D9F0009520F1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = PregnantPY/MapViewController.m; sourceTree = "<group>"; };
+		6F6805311AC37B7400DA3336 /* 1660609_588099817944828_1833967854_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1660609_588099817944828_1833967854_n.png; sourceTree = "<group>"; };
+		6F6805321AC37B7500DA3336 /* GmrV3105199.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = GmrV3105199.jpg; sourceTree = "<group>"; };
+		6F6805331AC37B7500DA3336 /* happy-pregnant_21187596.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "happy-pregnant_21187596.jpg"; sourceTree = "<group>"; };
+		6F6805341AC37B7500DA3336 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		6F6805351AC37B7500DA3336 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		6F6805361AC37B7500DA3336 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		6F6805371AC37B7500DA3336 /* image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image4.png; sourceTree = "<group>"; };
+		6F6805381AC37B7500DA3336 /* image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image5.png; sourceTree = "<group>"; };
+		6F6805391AC37B7500DA3336 /* image6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image6.png; sourceTree = "<group>"; };
+		6F68053A1AC37B7500DA3336 /* image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image7.png; sourceTree = "<group>"; };
+		6F68053B1AC37B7500DA3336 /* image8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image8.jpg; sourceTree = "<group>"; };
+		6F68053C1AC37B7500DA3336 /* image9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image9.jpg; sourceTree = "<group>"; };
+		6F68053D1AC37B7500DA3336 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
+		6F68053E1AC37B7500DA3336 /* pregnancy-labels-set-prev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pregnancy-labels-set-prev.jpg"; sourceTree = "<group>"; };
+		6F68053F1AC37B7500DA3336 /* pregnant-woman--sun_19-130916.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pregnant-woman--sun_19-130916.jpg"; sourceTree = "<group>"; };
+		6F6805401AC37B7500DA3336 /* pregnant-woman-and-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pregnant-woman-and-man.jpg"; sourceTree = "<group>"; };
+		6F6805411AC37B7500DA3336 /* pregnant-woman-icons-set-vector-1123500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pregnant-woman-icons-set-vector-1123500.jpg"; sourceTree = "<group>"; };
+		6F6805421AC37B7500DA3336 /* pregnant-woman-in-hand-drawn-style_23-2147505580.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pregnant-woman-in-hand-drawn-style_23-2147505580.jpg"; sourceTree = "<group>"; };
+		6F6805431AC37B7500DA3336 /* pregnant-woman-with-echo_432-19316570.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pregnant-woman-with-echo_432-19316570.jpg"; sourceTree = "<group>"; };
+		6F6805571AC37C5A00DA3336 /* bar_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_img.png; sourceTree = "<group>"; };
+		6F6844781AB3ECF40012841D /* DetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
+		6F68447C1AB3F7870012841D /* DetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
+		6F7CA14B1AB8DDC900340482 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		6F7CA14D1AB8DE1200340482 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		6F7CA14F1AB8DE5D00340482 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6F7CA1511AB8DF3800340482 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6F7CA1521AB8DF3800340482 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6F7CA1531AB8DF3800340482 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		6F7CA1541AB8DF3800340482 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6F7CA1551AB8DF3800340482 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6F7CA1561AB8DF3800340482 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		6F7CA1571AB8DF3800340482 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		6F7CA1581AB8DF3800340482 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6F7CA1591AB8DF3800340482 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6F7CA15A1AB8DF3800340482 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6F7CA15B1AB8DF3800340482 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6F92022E1AC37FFC00AC236E /* nav_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_bar_background.png; sourceTree = "<group>"; };
+		6F9202321AC380FB00AC236E /* nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav.png; sourceTree = "<group>"; };
+		6F9202661AC39E0D00AC236E /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		6FA1EDDF1AAB26C500844EF1 /* PregnantPY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PregnantPY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1EDE31AAB26C500844EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA1EDE41AAB26C500844EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +127,13 @@
 		6FA1EDF81AAB26C500844EF1 /* PregnantPYTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PregnantPYTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA1EDFD1AAB26C500844EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA1EDFE1AAB26C500844EF1 /* PregnantPYTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PregnantPYTests.m; sourceTree = "<group>"; };
+		6FC82B261AB24A3C00363231 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		6FC82B281AB24DB600363231 /* Comm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comm.h; sourceTree = "<group>"; };
+		6FC82B291AB24DB600363231 /* Comm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comm.m; sourceTree = "<group>"; };
+		6FC82B2B1AB250D000363231 /* NSData+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Utils.h"; sourceTree = "<group>"; };
+		6FC82B2C1AB250D000363231 /* NSData+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Utils.m"; sourceTree = "<group>"; };
+		6FCCD5CC1ACCBA9300FE0AE6 /* default.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = default.gpx; sourceTree = "<group>"; };
+		6FCCD5CE1ACCCDDF00FE0AE6 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +141,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7CA15C1AB8DF3800340482 /* CoreData.framework in Frameworks */,
+				6F7CA15D1AB8DF3800340482 /* CoreLocation.framework in Frameworks */,
+				6F7CA15E1AB8DF3800340482 /* CoreText.framework in Frameworks */,
+				6F7CA15F1AB8DF3800340482 /* GLKit.framework in Frameworks */,
+				6F7CA1601AB8DF3800340482 /* ImageIO.framework in Frameworks */,
+				6F7CA1611AB8DF3800340482 /* libc++.dylib in Frameworks */,
+				6F7CA1621AB8DF3800340482 /* libicucore.dylib in Frameworks */,
+				6F7CA1631AB8DF3800340482 /* libz.dylib in Frameworks */,
+				6F7CA1641AB8DF3800340482 /* OpenGLES.framework in Frameworks */,
+				6F7CA1651AB8DF3800340482 /* QuartzCore.framework in Frameworks */,
+				6F7CA1661AB8DF3800340482 /* SystemConfiguration.framework in Frameworks */,
+				6F7CA1501AB8DE5D00340482 /* AVFoundation.framework in Frameworks */,
+				6F7CA14C1AB8DDC900340482 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +167,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F6805301AC37B7400DA3336 /* previews */ = {
+			isa = PBXGroup;
+			children = (
+				6FCCD5CE1ACCCDDF00FE0AE6 /* home@2x.png */,
+				6F9202661AC39E0D00AC236E /* button.png */,
+				6F9202321AC380FB00AC236E /* nav.png */,
+				6F92022E1AC37FFC00AC236E /* nav_bar_background.png */,
+				6F6805571AC37C5A00DA3336 /* bar_img.png */,
+				6F6805311AC37B7400DA3336 /* 1660609_588099817944828_1833967854_n.png */,
+				6F6805321AC37B7500DA3336 /* GmrV3105199.jpg */,
+				6F6805331AC37B7500DA3336 /* happy-pregnant_21187596.jpg */,
+				6F6805341AC37B7500DA3336 /* image1.png */,
+				6F6805351AC37B7500DA3336 /* image2.png */,
+				6F6805361AC37B7500DA3336 /* image3.png */,
+				6F6805371AC37B7500DA3336 /* image4.png */,
+				6F6805381AC37B7500DA3336 /* image5.png */,
+				6F6805391AC37B7500DA3336 /* image6.png */,
+				6F68053A1AC37B7500DA3336 /* image7.png */,
+				6F68053B1AC37B7500DA3336 /* image8.jpg */,
+				6F68053C1AC37B7500DA3336 /* image9.jpg */,
+				6F68053D1AC37B7500DA3336 /* logo.jpg */,
+				6F68053E1AC37B7500DA3336 /* pregnancy-labels-set-prev.jpg */,
+				6F68053F1AC37B7500DA3336 /* pregnant-woman--sun_19-130916.jpg */,
+				6F6805401AC37B7500DA3336 /* pregnant-woman-and-man.jpg */,
+				6F6805411AC37B7500DA3336 /* pregnant-woman-icons-set-vector-1123500.jpg */,
+				6F6805421AC37B7500DA3336 /* pregnant-woman-in-hand-drawn-style_23-2147505580.jpg */,
+				6F6805431AC37B7500DA3336 /* pregnant-woman-with-echo_432-19316570.jpg */,
+			);
+			path = previews;
+			sourceTree = "<group>";
+		};
 		6FA1EDD61AAB26C500844EF1 = {
 			isa = PBXGroup;
 			children = (
+				6FCCD5CC1ACCBA9300FE0AE6 /* default.gpx */,
+				6F2C0EE21AC8D9F0009520F1 /* MapViewController.h */,
+				6F2C0EE31AC8D9F0009520F1 /* MapViewController.m */,
+				6F7CA1511AB8DF3800340482 /* CoreData.framework */,
+				6F7CA1521AB8DF3800340482 /* CoreLocation.framework */,
+				6F7CA1531AB8DF3800340482 /* CoreText.framework */,
+				6F7CA1541AB8DF3800340482 /* GLKit.framework */,
+				6F7CA1551AB8DF3800340482 /* ImageIO.framework */,
+				6F7CA1561AB8DF3800340482 /* libc++.dylib */,
+				6F7CA1571AB8DF3800340482 /* libicucore.dylib */,
+				6F7CA1581AB8DF3800340482 /* libz.dylib */,
+				6F7CA1591AB8DF3800340482 /* OpenGLES.framework */,
+				6F7CA15A1AB8DF3800340482 /* QuartzCore.framework */,
+				6F7CA15B1AB8DF3800340482 /* SystemConfiguration.framework */,
+				6F7CA14F1AB8DE5D00340482 /* AVFoundation.framework */,
+				6F7CA14D1AB8DE1200340482 /* GoogleMaps.bundle */,
+				6F7CA14B1AB8DDC900340482 /* GoogleMaps.framework */,
 				6FA1EDE11AAB26C500844EF1 /* PregnantPY */,
 				6FA1EDFB1AAB26C500844EF1 /* PregnantPYTests */,
 				6FA1EDE01AAB26C500844EF1 /* Products */,
@@ -81,6 +236,9 @@
 		6FA1EDE11AAB26C500844EF1 /* PregnantPY */ = {
 			isa = PBXGroup;
 			children = (
+				6F20E1D51ABE249000125377 /* pregnantSplash.jpeg */,
+				6FC82B261AB24A3C00363231 /* cat.jpg */,
+				6F6805301AC37B7400DA3336 /* previews */,
 				6FA1EDE61AAB26C500844EF1 /* AppDelegate.h */,
 				6FA1EDE71AAB26C500844EF1 /* AppDelegate.m */,
 				6FA1EDE91AAB26C500844EF1 /* ViewController.h */,
@@ -89,6 +247,12 @@
 				6FA1EDEF1AAB26C500844EF1 /* Images.xcassets */,
 				6FA1EDF11AAB26C500844EF1 /* LaunchScreen.xib */,
 				6FA1EDE21AAB26C500844EF1 /* Supporting Files */,
+				6FC82B281AB24DB600363231 /* Comm.h */,
+				6FC82B291AB24DB600363231 /* Comm.m */,
+				6FC82B2B1AB250D000363231 /* NSData+Utils.h */,
+				6FC82B2C1AB250D000363231 /* NSData+Utils.m */,
+				6F6844781AB3ECF40012841D /* DetailsController.h */,
+				6F68447C1AB3F7870012841D /* DetailsController.m */,
 			);
 			path = PregnantPY;
 			sourceTree = "<group>";
@@ -199,9 +363,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F68054E1AC37B7500DA3336 /* image8.jpg in Resources */,
+				6F6805481AC37B7500DA3336 /* image2.png in Resources */,
+				6FCCD5CF1ACCCDE000FE0AE6 /* home@2x.png in Resources */,
+				6F6805531AC37B7500DA3336 /* pregnant-woman-and-man.jpg in Resources */,
+				6F6805561AC37B7500DA3336 /* pregnant-woman-with-echo_432-19316570.jpg in Resources */,
+				6F68054C1AC37B7500DA3336 /* image6.png in Resources */,
+				6F68054F1AC37B7500DA3336 /* image9.jpg in Resources */,
 				6FA1EDEE1AAB26C500844EF1 /* Main.storyboard in Resources */,
+				6F9202331AC380FB00AC236E /* nav.png in Resources */,
+				6F6805471AC37B7500DA3336 /* image1.png in Resources */,
+				6F68054B1AC37B7500DA3336 /* image5.png in Resources */,
+				6F9202671AC39E0D00AC236E /* button.png in Resources */,
+				6F6805501AC37B7500DA3336 /* logo.jpg in Resources */,
+				6F6805541AC37B7500DA3336 /* pregnant-woman-icons-set-vector-1123500.jpg in Resources */,
+				6F6805551AC37B7500DA3336 /* pregnant-woman-in-hand-drawn-style_23-2147505580.jpg in Resources */,
+				6F92022F1AC37FFC00AC236E /* nav_bar_background.png in Resources */,
+				6F6805461AC37B7500DA3336 /* happy-pregnant_21187596.jpg in Resources */,
+				6F68054A1AC37B7500DA3336 /* image4.png in Resources */,
+				6F68054D1AC37B7500DA3336 /* image7.png in Resources */,
+				6F20E1D61ABE249000125377 /* pregnantSplash.jpeg in Resources */,
 				6FA1EDF31AAB26C500844EF1 /* LaunchScreen.xib in Resources */,
+				6FC82B271AB24A3C00363231 /* cat.jpg in Resources */,
+				6F6805491AC37B7500DA3336 /* image3.png in Resources */,
 				6FA1EDF01AAB26C500844EF1 /* Images.xcassets in Resources */,
+				6F6805441AC37B7500DA3336 /* 1660609_588099817944828_1833967854_n.png in Resources */,
+				6F6805521AC37B7500DA3336 /* pregnant-woman--sun_19-130916.jpg in Resources */,
+				6F6805451AC37B7500DA3336 /* GmrV3105199.jpg in Resources */,
+				6F6805511AC37B7500DA3336 /* pregnancy-labels-set-prev.jpg in Resources */,
+				6F7CA14E1AB8DE1200340482 /* GoogleMaps.bundle in Resources */,
+				6F6805581AC37C5A00DA3336 /* bar_img.png in Resources */,
+				6FCCD5CD1ACCBA9300FE0AE6 /* default.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +411,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC82B2D1AB250D000363231 /* NSData+Utils.m in Sources */,
 				6FA1EDEB1AAB26C500844EF1 /* ViewController.m in Sources */,
+				6F68447D1AB3F7870012841D /* DetailsController.m in Sources */,
+				6FC82B2A1AB24DB600363231 /* Comm.m in Sources */,
 				6FA1EDE81AAB26C500844EF1 /* AppDelegate.m in Sources */,
 				6FA1EDE51AAB26C500844EF1 /* main.m in Sources */,
+				6F2C0EE41AC8D9F0009520F1 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +496,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -334,6 +531,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -343,6 +541,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PregnantPY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +557,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PregnantPY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +621,7 @@
 				6FA1EE041AAB26C500844EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6FA1EE051AAB26C500844EF1 /* Build configuration list for PBXNativeTarget "PregnantPYTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +630,7 @@
 				6FA1EE071AAB26C500844EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

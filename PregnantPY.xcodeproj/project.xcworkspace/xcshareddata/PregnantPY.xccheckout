@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2081FE84-92CD-49DC-B5C9-95E306E4189B</string>
+	<string>B77D9EC4-55D9-4841-9260-1AE9DF47D7D9</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PregnantPY</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>EEFA9B0BDD73E9F9731BDA2A7E9B87704713E0B3</key>
-		<string>https://github.com/dfcorrearam/PregnantPY</string>
+		<string>https://github.com/dfcorrearam/PregnantPY.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PregnantPY.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/dfcorrearam/PregnantPY</string>
+	<string>https://github.com/dfcorrearam/PregnantPY.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

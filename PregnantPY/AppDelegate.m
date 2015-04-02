@@ -19,6 +19,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [GMSServices provideAPIKey:@"AIzaSyAHWZo6diK5-8yIJo9MjZ8baXic7sdwsJw"];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav"] forBarMetrics:UIBarMetricsDefault];
+    
+    NSShadow* shadow = [NSShadow new];
+    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    shadow.shadowColor = [UIColor lightGrayColor];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+        NSForegroundColorAttributeName: [UIColor whiteColor],
+        NSFontAttributeName: [UIFont fontWithName:@"Cochin-BoldItalic" size:20.0f],
+        NSShadowAttributeName: shadow
+    }];
+    
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    [attributes setValue:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [attributes setValue:[UIFont fontWithName:@"Cochin-BoldItalic" size:20.0f] forKey:NSFontAttributeName];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    //back button arrow color
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 

@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (assign, nonatomic) NSUInteger iden;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -25,44 +26,18 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    
+    
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /*UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:@"Please wait\n\n\n"
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+   
     
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    spinner.center = CGPointMake(130.5, 65.5);
-    spinner.color = [UIColor blackColor];
-    [spinner startAnimating];
-    [alert.view addSubview:spinner];
-    [self presentViewController:alert animated:NO completion:nil];*/
+   
     
-    // replace right bar button 'refresh' with spinner
-    /*UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    spinner.center = CGPointMake(160, 240);
-    spinner.hidesWhenStopped = YES;
-    [self.view addSubview:spinner];
-    [spinner startAnimating];
-    
-    // how we stop refresh from freezing the main UI thread
-    dispatch_queue_t downloadQueue = dispatch_queue_create("downloader", NULL);
-    dispatch_async(downloadQueue, ^{
-        
-        // do our long running process here
-        [NSThread sleepForTimeInterval:10];
-        
-        // do any UI stuff on the main UI thread
-        dispatch_async(dispatch_get_main_queue(), ^{
-            //self.myLabel.text = @"After!";
-            NSLog(@"hohoh");
-            [spinner stopAnimating];
-        });
-        
-    });
-    dispatch_release(downloadQueue);*/
     
     self.title = @"Lista de locales para ti";
     [Comm command:@"pregnant" onSuccess:^(id onSuccess) {
@@ -81,24 +56,23 @@
             UIButton *rightButton = [self createButton];
             leftButton.tag = [response[@"data"][i][@"id"] integerValue];
             rightButton.tag = [response[@"data"][i+1][@"id"] integerValue];
-            leftButton.layer.cornerRadius = 30;
-            leftButton.clipsToBounds = YES;
-            rightButton.layer.cornerRadius = 30;
-            rightButton.clipsToBounds = YES;
+            
             
             UILabel *leftLabel = [UILabel new];
             [self.scrollView addSubview:leftLabel];
             leftLabel.translatesAutoresizingMaskIntoConstraints = NO;
             leftLabel.textAlignment = NSTextAlignmentCenter;
             leftLabel.text = response[@"data"][i][@"title"];
-            leftLabel.font = [UIFont systemFontOfSize:12];
+            leftLabel.font = [UIFont fontWithName:@"Cochin-BoldItalic" size:14];
+            leftLabel.textColor = [UIColor whiteColor];
             
             UILabel *rightLabel = [UILabel new];
             [self.scrollView addSubview:rightLabel];
             rightLabel.translatesAutoresizingMaskIntoConstraints = NO;
             rightLabel.textAlignment = NSTextAlignmentCenter;
             rightLabel.text = response[@"data"][i+1][@"title"];
-            rightLabel.font = [UIFont systemFontOfSize:12];
+            rightLabel.font = [UIFont fontWithName:@"Cochin-BoldItalic" size:14];
+            rightLabel.textColor = [UIColor whiteColor];
             
             NSString *leftBase64 = response[@"data"][i][@"photo"];
             NSData *leftData = [[NSData alloc] initWithBase64EncodedString:leftBase64 options:0];
@@ -213,7 +187,7 @@
             previousLeftLabel = leftLabel;
             previousRightLabel = rightLabel;
         }
-    }];
+    } spinner:self.spinner];
     
 
 }
@@ -222,6 +196,8 @@
 {
     self.iden = button.tag;
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Atrás" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     [self performSegueWithIdentifier:@"DetailsSegueID" sender:self];
 }
 
@@ -229,6 +205,14 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self action:@selector(aMethod:) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
+    button.layer.shadowOffset = CGSizeMake(-15, 20);
+    button.layer.shadowRadius = 30;
+    button.layer.shadowOpacity = 0.5;
+    button.layer.cornerRadius = 30;
+    button.layer.masksToBounds = NO;
+    button.clipsToBounds = YES;
+    
+    
     [self.scrollView addSubview:button];
     return button;
 }

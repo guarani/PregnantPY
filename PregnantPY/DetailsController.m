@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *telefono1;
 @property (weak, nonatomic) IBOutlet UILabel *telefono2;
 @property (weak, nonatomic) IBOutlet UILabel *direccion;
+@property (weak, nonatomic) IBOutlet UITextView *descripcion;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -31,7 +33,9 @@
     mapVC.nombre = self.nombre;
     mapVC.latitud = self.latitud;
     mapVC.longitud = self.longitud;
-    //[self performSegueWithIdentifier:@"DetailsSegueID" sender:self];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Atrás" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     [self.navigationController pushViewController:mapVC animated:YES];
 }
 
@@ -44,7 +48,7 @@
         [[UIApplication sharedApplication] openURL:phoneUrl];
     } else
     {
-        calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        calert = [[UIAlertView alloc]initWithTitle:@"Alerta" message:@"La funcionalidad de llamadas no está disponible." delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
         [calert show];
     }
 
@@ -53,6 +57,9 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
+    
+    self.descripcion.layer.cornerRadius = 10;
+    self.descripcion.clipsToBounds = YES;
     
     self.callPhone1.layer.cornerRadius = 10;
     self.callPhone1.clipsToBounds = YES;
@@ -87,10 +94,10 @@
         self.direccion.text = response[@"data"][@"address"];
         
         self.latitud = (CGFloat) [response[@"data"][@"latitud"] floatValue];
-        self.latitud = (CGFloat) [response[@"data"][@"longitud"] floatValue];
+        self.longitud = (CGFloat) [response[@"data"][@"longitud"] floatValue];
         
         self.title = response[@"data"][@"title"];
         self.nombre = self.title;
-    }];
+    } spinner:self.spinner];
 }
 @end

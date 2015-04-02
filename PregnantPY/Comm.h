@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Comm : NSObject
 
-+ (void)command:(NSString *)command onSuccess:(void(^)(id))onSuccess;
++ (void)command:(NSString *)command onSuccess:(void(^)(id))onSuccess spinner:(UIActivityIndicatorView *)spinner;
 
 @end

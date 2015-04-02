@@ -98,7 +98,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
     //locationManager.distanceFilter = 100.0;
-    [locationManager requestAlwaysAuthorization];
+    [locationManager requestWhenInUseAuthorization];
     locationManager.delegate = self; // we set the delegate of locationManager to self.
     locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
     
@@ -118,20 +118,20 @@
     [self.view addSubview:mapView];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[mapView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mapView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[mapView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(mapView)]];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button addTarget:self action:@selector(getLocation:) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
-    [button setTitle:@"test" forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"home"]  forState:UIControlStateNormal];
     [mapView addSubview:button];
-    [mapView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(20)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
-    [mapView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[button(20)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
+    [mapView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(88)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
+    [mapView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[button(88)]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(button)]];
     
     
     // Creates a marker in the center of the map.
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(self.latitud, self.longitud);
     marker.title = self.nombre;
-    marker.snippet = @"Australia";
+    marker.snippet = @"Paraguay";
     
     mapView.selectedMarker = marker;
     

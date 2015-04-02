@@ -59,20 +59,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="601"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-Ms-1qR">
-                                <rect key="frame" x="42" y="444" width="447" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-Ms-1qR">
+                                <rect key="frame" x="42" y="445" width="447" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aO-sm-tdj">
-                                <rect key="frame" x="42" y="484" width="447" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aO-sm-tdj">
+                                <rect key="frame" x="42" y="484.5" width="447" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dirección" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtH-P8-wnO">
-                                <rect key="frame" x="42" y="533" width="54" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dirección" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtH-P8-wnO">
+                                <rect key="frame" x="42" y="533" width="54" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="ZAT-Ip-Uxz"/>
                                 </constraints>
@@ -81,19 +81,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuS-ZR-1zi">
-                                <rect key="frame" x="42" y="559" width="422" height="17"/>
+                                <rect key="frame" x="42" y="559" width="422" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-fX-wUh">
-                                <rect key="frame" x="193" y="72" width="214" height="214"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="p1f-fX-wUh">
+                                <rect key="frame" x="193" y="72" width="214.5" height="214.5"/>
                                 <color key="backgroundColor" red="1" green="0.34695020989999997" blue="0.38607382829999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p1f-fX-wUh" secondAttribute="height" multiplier="1:1" id="mqA-58-n6R"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86V-vu-8Xd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86V-vu-8Xd">
                                 <rect key="frame" x="28" y="312" width="545" height="95"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -102,8 +102,8 @@
                                 <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Teléfonos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRY-EI-19c">
-                                <rect key="frame" x="41" y="417" width="53" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teléfonos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRY-EI-19c">
+                                <rect key="frame" x="41" y="418.5" width="53" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -162,7 +162,7 @@
                             <constraint firstItem="fb4-xW-kym" firstAttribute="leading" secondItem="ZuS-ZR-1zi" secondAttribute="trailing" constant="21" id="0GW-DO-kCr"/>
                             <constraint firstItem="4sd-Ms-1qR" firstAttribute="leading" secondItem="tDz-8F-NWt" secondAttribute="leadingMargin" constant="26" id="0g2-HH-FjI"/>
                             <constraint firstAttribute="centerX" secondItem="p1f-fX-wUh" secondAttribute="centerX" id="32q-Fm-nci"/>
-                            <constraint firstItem="JRY-EI-19c" firstAttribute="top" secondItem="86V-vu-8Xd" secondAttribute="bottom" constant="10" id="5zd-3Y-WhZ"/>
+                            <constraint firstItem="JRY-EI-19c" firstAttribute="top" secondItem="86V-vu-8Xd" secondAttribute="bottom" constant="11" id="5zd-3Y-WhZ"/>
                             <constraint firstItem="m8p-fL-qFE" firstAttribute="leading" secondItem="0aO-sm-tdj" secondAttribute="trailing" constant="8" id="8td-IW-jSl"/>
                             <constraint firstItem="0aO-sm-tdj" firstAttribute="leading" secondItem="tDz-8F-NWt" secondAttribute="leadingMargin" constant="26" id="BaN-B4-9zs"/>
                             <constraint firstItem="4sd-Ms-1qR" firstAttribute="top" secondItem="JRY-EI-19c" secondAttribute="bottom" constant="10" id="C00-zR-Gz4"/>
